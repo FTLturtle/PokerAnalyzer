@@ -1,9 +1,9 @@
-package quickanalyzer;
+package messyanalyzer;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class QuickPokerHandAnalyzer {
+public class MessyPokerHandAnalyzer {
 
     // This method takes a string representation of two five-card poker hands, e.g., "AH TD 5C 9S JS 3D 7H 5S JC 5H".
     // The left five represent the left hand, and the right five represent the right hand. The method then returns
@@ -49,7 +49,7 @@ class Hand {
     Map<Integer, Integer> handRankMap; // histogram of the ranks
     List<Integer> handRankList; // list of all the ranks
     int handTypeValue;  // the value of the hand type: high card is 0, pair is 1, two pair is 2, three of a kind is 3,
-                        // straight is 4, flush is 5, full house is 6, four of a kind is 7, straight flush is 8
+    // straight is 4, flush is 5, full house is 6, four of a kind is 7, straight flush is 8
 
     public Hand(Card[] cards) {
         handRankMap = new HashMap<>();
@@ -117,18 +117,7 @@ class Hand {
     // Method for determining if a hand is a straight
     private boolean evaluateStraight() {
         Collections.sort(handRankList);
-
-        Integer currentRank = handRankList.get(0);
-        boolean isStraight = true;
-        for (int i = 1; i < handRankList.size(); i++) {
-            if (currentRank != handRankList.get(i) + 1) {
-                isStraight = false;
-                break;
-            }
-            currentRank = handRankList.get(i);
-        }
-
-        return isStraight;
+        return (handRankList.get(4) - handRankList.get(0) == 4);
     }
 }
 
@@ -176,12 +165,12 @@ class HandComparator implements Comparator<Hand> {
 
     // method for comparing hands of the same type
     private int compareHandsOfSameType(int handTypeValue, Hand hand1, Hand hand2) {
+        // I use a linked hash map, because it can be sorted by both key and value, and its order is guaranteed.
+        LinkedHashMap<Integer, Integer> sortedHandRankMap1 = getSortedMapByValDescBreakTieByKeyDesc(hand1.handRankMap);
+        LinkedHashMap<Integer, Integer> sortedHandRankMap2 = getSortedMapByValDescBreakTieByKeyDesc(hand2.handRankMap);
 
-        Map<Integer, Integer> sortedHandRankMap1 = getMapSortedByValueDesc(hand1.handRankMap);
-        Map<Integer, Integer> sortedHandRankMap2 = getMapSortedByValueDesc(hand2.handRankMap);
-
-        List<Integer> keyList1 = new ArrayList<>(hand1.handRankMap.keySet());
-        List<Integer> keyList2 = new ArrayList<>(hand2.handRankMap.keySet());
+        List<Integer> keyList1 = new ArrayList<>(sortedHandRankMap1.keySet());
+        List<Integer> keyList2 = new ArrayList<>(sortedHandRankMap2.keySet());
 
         int result = 0;
         for (int i = 0; i < keyList1.size(); i++) {
@@ -196,25 +185,12 @@ class HandComparator implements Comparator<Hand> {
         return result;
     }
 
-    private Map<Integer, Integer> getMapSortedByValueDesc(Map<Integer, Integer> map) {
+    private LinkedHashMap<Integer, Integer> getSortedMapByValDescBreakTieByKeyDesc(Map<Integer, Integer> map) {
         return map
                 .entrySet()
                 .stream()
                 .sorted(Collections.reverseOrder(Map.Entry.comparingByKey()))
                 .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
-    }
-
-    public static void main(String[] args) {
-        Map<Integer, Integer> asdf = new HashMap<>();
-        asdf.put(1,2);
-        asdf.put(3,2);
-        asdf.put(14,1);
-
-        HandComparator handComparator = new HandComparator();
-
-        Map<Integer, Integer> fdsa = handComparator.getMapSortedByValueDesc(asdf);
-
-        System.out.println(fdsa);
     }
 }
