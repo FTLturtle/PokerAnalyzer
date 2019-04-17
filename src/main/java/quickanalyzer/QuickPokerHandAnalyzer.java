@@ -1,3 +1,5 @@
+package quickanalyzer;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -178,12 +180,15 @@ class HandComparator implements Comparator<Hand> {
         Map<Integer, Integer> sortedHandRankMap1 = getMapSortedByValueDesc(hand1.handRankMap);
         Map<Integer, Integer> sortedHandRankMap2 = getMapSortedByValueDesc(hand2.handRankMap);
 
+        List<Integer> keyList1 = new ArrayList<>(hand1.handRankMap.keySet());
+        List<Integer> keyList2 = new ArrayList<>(hand2.handRankMap.keySet());
+
         int result = 0;
-        for (int i = 0; i < hand1.handRankMap.size(); i++) {
-            if (hand1.handRankList.get(i) > hand2.handRankList.get(i)) {
+        for (int i = 0; i < keyList1.size(); i++) {
+            if (keyList1.get(i) > keyList2.get(i)) {
                 result = 1;
                 break;
-            } else if (hand1.handRankList.get(i) < hand2.handRankList.get(i)) {
+            } else if (keyList1.get(i) < keyList2.get(i)) {
                 result = -1;
                 break;
             }
