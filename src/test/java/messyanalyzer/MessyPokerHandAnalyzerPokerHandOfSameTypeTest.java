@@ -3,7 +3,7 @@ package messyanalyzer;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MessyPokerHandAnalyzerHandOfSameTypeTest {
+public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
 
     // Comparing two equivalent high card hands
     @Test
