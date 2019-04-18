@@ -21,7 +21,7 @@ public enum Rank {
         this.characterRepresentation = characterRepresentation;
     }
 
-    public Integer getRankValue() {
+    public Integer getOrdinal() {
         return ordinal();
     }
 

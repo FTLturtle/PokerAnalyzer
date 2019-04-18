@@ -30,6 +30,6 @@ public class Card implements Comparable<Card>{
 
     @Override
     public int compareTo(Card otherCard) {
-        return this.rank.getRankValue() - otherCard.getRank().getRankValue();
+        return this.rank.compareTo(otherCard.getRank());
     }
 }

@@ -54,7 +54,7 @@ public class PokerHandAnalyzer {
         } else {
             Collections.sort(cards);
             // if there are 5 cards in order, and the last card's rank is 4 less than the first card, then the hand is a straight
-            return (cards.get(4).getRank().getRankValue() - cards.get(0).getRank().getRankValue() == 4);
+            return (cards.get(4).getRank().getOrdinal() - cards.get(0).getRank().getOrdinal() == 4);
         }
     }
 
