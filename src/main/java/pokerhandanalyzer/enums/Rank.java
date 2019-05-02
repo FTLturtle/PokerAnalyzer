@@ -1,4 +1,4 @@
-package objectorientedanalyzer.enums;
+package pokerhandanalyzer.enums;
 
 public enum Rank {
     TWO('2'),

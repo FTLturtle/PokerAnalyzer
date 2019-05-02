@@ -1,9 +1,9 @@
-package objectorientedanalyzer;
+package pokerhandanalyzer;
 
-import objectorientedanalyzer.enums.Rank;
-import objectorientedanalyzer.enums.Suit;
-import objectorientedanalyzer.models.Card;
-import objectorientedanalyzer.models.PokerHand;
+import pokerhandanalyzer.enums.Rank;
+import pokerhandanalyzer.enums.Suit;
+import pokerhandanalyzer.models.Card;
+import pokerhandanalyzer.models.PokerHand;
 
 import java.util.ArrayList;
 import java.util.List;

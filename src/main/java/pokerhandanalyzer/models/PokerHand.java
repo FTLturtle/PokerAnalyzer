@@ -1,4 +1,4 @@
-package objectorientedanalyzer.models;
+package pokerhandanalyzer.models;
 
 import java.util.List;
 

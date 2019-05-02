@@ -1,9 +1,9 @@
-package messyanalyzer;
+package pokerhandanalyzer;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
+public class StringPokerHandAnalyzerPokerHandOfSameTypeTest {
 
     // Comparing two equivalent high card hands
     @Test
@@ -13,7 +13,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "neither";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -27,7 +27,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "left";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -41,7 +41,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "neither";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -55,7 +55,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "right";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -69,7 +69,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "right";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -83,7 +83,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "right";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -97,7 +97,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "neither";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -111,7 +111,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "left";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -125,7 +125,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "neither";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -139,7 +139,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "left";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -153,7 +153,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "neither";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -167,7 +167,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "right";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -181,7 +181,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "neither";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -195,7 +195,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "left";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -209,7 +209,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "neither";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -223,7 +223,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "left";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -237,7 +237,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "neither";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);
@@ -251,7 +251,7 @@ public class MessyPokerHandAnalyzerPokerHandOfSameTypeTest {
         String expectedOutput = "left";
 
         // When
-        String actualOutput = MessyPokerHandAnalyzer.analyzeHands(input);
+        String actualOutput = StringPokerHandAnalyzer.analyzeHands(input);
 
         // Then
         Assert.assertEquals(expectedOutput, actualOutput);

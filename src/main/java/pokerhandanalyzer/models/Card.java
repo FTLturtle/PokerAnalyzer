@@ -1,7 +1,7 @@
-package objectorientedanalyzer.models;
+package pokerhandanalyzer.models;
 
-import objectorientedanalyzer.enums.Rank;
-import objectorientedanalyzer.enums.Suit;
+import pokerhandanalyzer.enums.Rank;
+import pokerhandanalyzer.enums.Suit;
 
 public class Card implements Comparable<Card>{
     private Rank rank;

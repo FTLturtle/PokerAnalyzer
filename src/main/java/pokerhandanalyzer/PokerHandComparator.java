@@ -1,7 +1,7 @@
-package objectorientedanalyzer;
+package pokerhandanalyzer;
 
-import objectorientedanalyzer.enums.Rank;
-import objectorientedanalyzer.models.PokerHand;
+import pokerhandanalyzer.enums.Rank;
+import pokerhandanalyzer.models.PokerHand;
 
 import java.util.*;
 import java.util.stream.Collectors;
